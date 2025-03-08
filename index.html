@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
 
+		<link rel="stylesheet" href="/css/custom.css">
+
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
@@ -18,19 +20,39 @@
 			<div class="slides">
 				<section>Slide 1</section>
 				<section>
+					<h2>Slide 2</h2>
 					<div class="fragment reveal r-vstack">
-						Slide 2
 						<canvas id="exampleScene" width="500" height="500"/>
 					</div>
 				</section>
 				<section>
-					Slide 3
+					<p>
+						Press button below to copy code
+					</p>
+					<pre class="fragment" style="width: 100%;">
+						<code data-trim class="language-cpp">
+							void AMoverObject::Tick(float DeltaTime)
+							{
+								Super::Tick(DeltaTime);
+
+								// update location
+								FVector CurrentLocation = GetActorLocation();
+								FVector AdditionVector = GetActorForwardVector() * Speed * DeltaTime;
+								FVector NewLocation = CurrentLocation + AdditionVector;
+								SetActorLocation(NewLocation);
+
+								// update rotation
+								AddActorWorldRotation(FRotator(0,90 * DeltaTime, 0));
+							}
+						</code>
+					</pre>
 				</section>
 			</div>
 		</div>
 
 		<script src="scenes/exampleScene.js" type="module"></script>
-		<script src="three.js" type="module"></script>
+		<script src="scripts/three.js" type="module"></script>
+		<script src="scripts/copyButton.js"></script>
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>

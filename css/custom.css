@@ -1,0 +1,10 @@
+.copy-btn
+{
+    background: rgb(93, 148, 31);
+    border: 0px transparent;
+    height: 2rem;
+    border-radius: 5px;
+    color: whitesmoke;
+    min-width: 5rem;
+    cursor: pointer;
+}

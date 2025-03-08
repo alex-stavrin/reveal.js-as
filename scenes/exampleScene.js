@@ -1,4 +1,4 @@
-import { ThreeScene } from "../three"
+import { ThreeScene } from "../scripts/three"
 import * as THREE from "three";
 
 let cube;
