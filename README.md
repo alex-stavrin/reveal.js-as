@@ -1,4 +1,4 @@
-# reaveal.js.as
+# reveal.js.as
 
 This is a fork of reveal.js
 
