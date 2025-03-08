@@ -17,10 +17,20 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<div class="fragment reveal r-vstack">
+						Slide 2
+						<canvas id="exampleScene" width="500" height="500"/>
+					</div>
+				</section>
+				<section>
+					Slide 3
+				</section>
 			</div>
 		</div>
 
+		<script src="scenes/exampleScene.js" type="module"></script>
+		<script src="three.js" type="module"></script>
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
